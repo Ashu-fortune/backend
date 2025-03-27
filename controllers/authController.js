@@ -32,7 +32,7 @@ const register = async (req, res) => {
     role,
     verificationToken,
   });
-  const origin = 'http://localhost:3000';
+  const origin = 'https://frontend-jet-zeta-18.vercel.app';
   // const newOrigin = 'https://react-node-user-workflow-front-end.netlify.app';
 
   // const tempOrigin = req.get('origin');
@@ -146,7 +146,7 @@ const forgotPassword = async (req, res) => {
   if (user) {
     const passwordToken = crypto.randomBytes(70).toString('hex');
     // send email
-    const origin = 'http://localhost:3000';
+    const origin = 'https://frontend-jet-zeta-18.vercel.app';
     await sendResetPasswordEmail({
       name: user.name,
       email: user.email,
