@@ -43,9 +43,6 @@ app.use(mongoSanitize());
 app.use(express.json());
 app.use(cookieParser(process.env.JWT_SECRET));
 
-app.use(express.static('./public'));
-app.use(fileUpload());
-
 app.get('/', (request, response)=> {
   response.json({message: "Good" })
 })
